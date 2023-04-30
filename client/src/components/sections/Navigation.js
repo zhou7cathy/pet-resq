@@ -13,17 +13,17 @@ const onChange = (key: string) => {
 const items: TabsProps['items'] = [
   {
     key: '1',
-    label: `AboutUs`,
+    label: `About Us`,
     children: <AboutUs/>,
   },
   {
     key: '2',
-    label: `Lost`,
+    label: `Lost Pet`,
     children: <Lost/>,
   },
   {
     key: '3',
-    label: `Found`,
+    label: `Found Pet`,
     children: <Found/>,
   },
   {
