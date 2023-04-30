@@ -1,13 +1,10 @@
-import { Button } from 'antd';
+import React from "react";
+import Container from "./components/Container";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div>
-        <Button type="primary">Primary Button</Button>
-        </div>
-      </header>
+        <Container/>
     </div>
   );
 }
