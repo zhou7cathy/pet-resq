@@ -1,3 +1,27 @@
+const userSeeds= [
+  {
+    "name": "Carol",
+    "email": "carol123@hotmail.com",
+    "password": "password1",
+  },
+  {
+    "name": "Jack",
+    "email": "jackychan@gmail.com",
+    "password": "password1",
+  },
+  {
+    "name": "Rehana",
+    "email": "Rehana666@hotmail.com",
+    "password": "password1",
+  }
+]
+
+const animalTypes= [
+  {
+    "name": ["Cat", "Dog", "Bird","Cattle","Ferret","Goat","Guinea Pig", "Horse", "Marsupial", "Pig","Rabbit","Reptile","Rodent","Sheep","Turtle"]
+  }
+]
+
 const faqs= [
 	{
 		"question": "I have found or seen someone's lost pet, what do I do?",
@@ -9,13 +33,8 @@ const faqs= [
 	},
 ]
 
-const animalTypes= [
-  {
-    "name": ["Cat", "Dog", "Bird","Cattle","Ferret","Goat","Guinea Pig", "Horse", "Marsupial", "Pig","Rabbit","Reptile","Rodent","Sheep","Turtle"]
-  }
-]
-
 module.exports = {
-	faqs,
+  userSeeds
   animalTypes,
+  faqs,
 };
