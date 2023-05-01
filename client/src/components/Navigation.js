@@ -6,10 +6,6 @@ import Lost from '../pages/Lost'
 import Found from '../pages/Found'
 import FAQs from '../pages/FAQs'
 
-const onChange = (key: string) => {
-  console.log(key);
-};
-
 const items: TabsProps['items'] = [
   {
     key: '1',
@@ -33,6 +29,6 @@ const items: TabsProps['items'] = [
   },
 ];
 
-const Navigation: React.FC = () => <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
+const Navigation: React.FC = () => <Tabs defaultActiveKey="1" items={items} />;
 
 export default Navigation;

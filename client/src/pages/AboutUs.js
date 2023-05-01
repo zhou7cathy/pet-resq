@@ -1,5 +1,6 @@
 import React from 'react'
-import animals from '../assets/animals.jpg'
+import animals from '../assets/animals.png'
+import { Button, Space } from 'antd';
 
 export default function AboutMe() {
   return (
@@ -11,6 +12,9 @@ export default function AboutMe() {
           What We Do? Free pet finding tools!<br></br>
           Lost or found pet?
         </h3>
+        <Space wrap>
+          <Button>Report Pet</Button>
+        </Space>
       </div>
     </div>
   )

@@ -34,13 +34,6 @@ const AnimalCollection = new Schema(
 				required: true,
 			}
 		],
-		colors: [
-			{ 
-				type: Schema.Types.ObjectId, 
-				ref: 'Color',
-				required: true,
-			}
-		],
   },
 );
 
