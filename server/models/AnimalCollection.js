@@ -1,16 +1,19 @@
 const { Schema, model } = require('mongoose');
 
-const foundPetSchema = new Schema(
+const AnimalCollection = new Schema(
   {
     status: {
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+    },
     location: {
       type: String,
-      required: true,
+			required: true,
     },
-    image:{
+		image:{
       type: String,
       required: true,
     },
@@ -18,6 +21,7 @@ const foundPetSchema = new Schema(
       type: String,
       minLength: 15,
       maxLength: 500,
+			required: true,
     },
 		postDate: {
       type: Date,
@@ -36,10 +40,10 @@ const foundPetSchema = new Schema(
 				ref: 'Color',
 				required: true,
 			}
-    ]
+		],
   },
 );
 
-const FoundPet = model('lostPet', foundPetSchema);
+const AnimalCollection = model('animalCollection', AnimalCollectionSchema);
 
-module.exports = FoundPet;
+module.exports = AnimalCollection;

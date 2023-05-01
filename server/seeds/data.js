@@ -9,6 +9,13 @@ const faqs= [
 	},
 ]
 
+const animalTypes= [
+  {
+    "name": ["Cat", "Dog", "Bird","Cattle","Ferret","Goat","Guinea Pig", "Horse", "Marsupial", "Pig","Rabbit","Reptile","Rodent","Sheep","Turtle"]
+  }
+]
+
 module.exports = {
 	faqs,
+  animalTypes,
 };
