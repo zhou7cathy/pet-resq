@@ -29,6 +29,10 @@ const items: TabsProps['items'] = [
   },
 ];
 
-const Navigation: React.FC = () => <Tabs defaultActiveKey="1" items={items} />;
-
-export default Navigation;
+export default function Navigation() {
+  return (
+    <div>
+        <Tabs defaultActiveKey="1" items={items} />;
+    </div>
+  )
+}
