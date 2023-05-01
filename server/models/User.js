@@ -5,7 +5,6 @@ const UserSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
     trim: true,
   },
   email: {
@@ -17,8 +16,20 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 5,
+    minlength: 8,
   },
+  lostPets: [
+    { 
+      type: Schema.Types.ObjectId, 
+      ref: 'lostPet' 
+    }
+  ],
+  foundPets: [
+    { 
+      type: Schema.Types.ObjectId, 
+      ref: 'foundPet' 
+    }
+  ],
 });
 
 // set up pre-save middleware to create password
