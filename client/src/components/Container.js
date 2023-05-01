@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './sections/Navigation'
-import Footer from './sections/Footer'
+import Navigation from './Navigation'
+import Footer from './Footer'
 import PetResQ from '../assets/pet-resq.png'
 import Slogan from '../assets/slogan.png'
 

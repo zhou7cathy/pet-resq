@@ -1,5 +1,5 @@
 import React from 'react'
-import animals from '../../assets/animals.jpg'
+import animals from '../assets/animals.jpg'
 
 export default function AboutMe() {
   return (
