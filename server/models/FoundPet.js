@@ -8,6 +8,11 @@ const foundPetSchema = new Schema(
     },
     location: {
       type: String,
+      required: true,
+    },
+    image:{
+      type: String,
+      required: true,
     },
     description: {
       type: String,
@@ -18,8 +23,20 @@ const foundPetSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-	  AnimalTypes: [AnimalType],
-    colors: [color],
+		AnimalTypes: [
+			{ 
+				type: Schema.Types.ObjectId, 
+				ref: 'AnimalType' ,
+				required: true,
+			}
+		],
+		colors: [
+			{ 
+				type: Schema.Types.ObjectId, 
+				ref: 'Color',
+				required: true,
+			}
+    ]
   },
 );
 

@@ -11,18 +11,36 @@ const lostPetSchema = new Schema(
     },
     location: {
       type: String,
+			required: true,
+    },
+		image:{
+      type: String,
+      required: true,
     },
     description: {
       type: String,
       minLength: 15,
       maxLength: 500,
+			required: true,
     },
 		postDate: {
       type: Date,
       default: Date.now,
     },
-		AnimalTypes: [AnimalType],
-    colors: [color],
+		AnimalTypes: [
+			{ 
+				type: Schema.Types.ObjectId, 
+				ref: 'AnimalType' ,
+				required: true,
+			}
+		],
+		colors: [
+			{ 
+				type: Schema.Types.ObjectId, 
+				ref: 'Color',
+				required: true,
+			}
+		],
   },
 );
 
