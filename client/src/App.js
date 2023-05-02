@@ -6,10 +6,13 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import Login from './pages/Login';
+import AboutUs from './pages/AboutUs'
 
 
 // Construct our main GraphQL API endpoint
@@ -40,8 +43,19 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Header/>
-        <Navigation className="navigation"/>
+        <Header />
+        <div className='container'>
+          <Routes>
+            <Route 
+              path="/" 
+              element={<Navigation className="navigation"/>}
+            />
+            <Route 
+              path="/Login" 
+              element={<Login />}
+            />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </ApolloProvider>

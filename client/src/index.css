@@ -21,7 +21,16 @@ h5 {
   text-align: center;
 }
 
+.container {
+  min-height: 70vh;
+}
+
 .footer {
   text-align: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
