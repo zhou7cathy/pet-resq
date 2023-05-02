@@ -7,7 +7,6 @@ const typeDefs = gql`
     name: String
     email: String
     password: String
-    animals: [animal]!
   }
 
   type Auth {
@@ -25,6 +24,7 @@ const typeDefs = gql`
   type Query {
     Users: [User]!
     User(UserId: ID!): User
+    me: User
 
     FAQs: [FAQ]!
   }
