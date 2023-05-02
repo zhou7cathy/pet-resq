@@ -32,7 +32,7 @@ const items: TabsProps['items'] = [
 export default function Navigation() {
   return (
     <div>
-        <Tabs defaultActiveKey="1" items={items} />;
+        <Tabs defaultActiveKey="1" items={items} />
     </div>
   )
 }
