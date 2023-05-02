@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const AnimalCollection = new Schema(
+const Animal = new Schema(
   {
     status: {
       type: String,
@@ -37,6 +37,6 @@ const AnimalCollection = new Schema(
   },
 );
 
-const AnimalCollection = model('animalCollection', AnimalCollectionSchema);
+const Animal = model('animal', AnimalSchema);
 
-module.exports = AnimalCollection;
+module.exports = Animal;

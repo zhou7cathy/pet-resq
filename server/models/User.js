@@ -18,16 +18,10 @@ const UserSchema = new Schema({
     required: true,
     minlength: 8,
   },
-  lostPets: [
+  Animals: [
     { 
       type: Schema.Types.ObjectId, 
-      ref: 'lostPet' 
-    }
-  ],
-  foundPets: [
-    { 
-      type: Schema.Types.ObjectId, 
-      ref: 'foundPet' 
+      ref: 'animal' 
     }
   ],
 });
