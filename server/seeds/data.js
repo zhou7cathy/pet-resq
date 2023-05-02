@@ -34,7 +34,7 @@ const faqs= [
 ]
 
 module.exports = {
-  userSeeds
+  userSeeds,
   animalTypes,
   faqs,
 };

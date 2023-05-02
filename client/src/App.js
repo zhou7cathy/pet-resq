@@ -12,8 +12,6 @@ import Header from './components/Header';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Login from './pages/Login';
-import AboutUs from './pages/AboutUs'
-
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -47,7 +45,7 @@ function App() {
         <div className='container'>
           <Routes>
             <Route 
-              path="/" 
+              path="/pet-resq" 
               element={<Navigation className="navigation"/>}
             />
             <Route 
