@@ -22,6 +22,27 @@ const animalTypes= [
   }
 ]
 
+const animals= [
+  {
+    "status": "Lost Pet",
+    "name": "cookie",
+    "location":"perth",
+    "image":"cockatiel",
+    "description":"Cookie is a lovely cockatiel with Grey body with yellow chest and orange cheeks. Please contact me if anyone has found our beloved Cookie at email: cookie@hotmail.com ",
+    "postDate":"01/05/2023",
+    "AnimalTypes":"bird",
+  }
+  {
+    "status": "Lost Pet",
+    "name": "Ozzy",
+    "location":"perth",
+    "image":"cat",
+    "description":"Ozzy is a Ginger Domestic Medium Hair and wears a light blue collar with a bell. He's microchips and is deed, and is a timid cat. Please help find our Ozzy, we're desperate to have our fur-baby back. If you spot him please keep him with you or in your area and we will come to you. Reward offered if he's found. Contact number:0410665788. ",
+    "postDate":"01/05/2023",
+    "AnimalTypes":"cat",
+  }
+]
+
 const faqs= [
 	{
 		"question": "I have found or seen someone's lost pet, what do I do?",
@@ -37,4 +58,5 @@ module.exports = {
   userSeeds,
   animalTypes,
   faqs,
+  animals,
 };
