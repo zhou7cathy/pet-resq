@@ -22,7 +22,6 @@ const Login = (props) => {
 
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
     console.log(formState);
     try {
       const { data } = await login({
@@ -33,12 +32,6 @@ const Login = (props) => {
     } catch (e) {
       console.error(e);
     }
-
-    // clear form values
-    setFormState({
-      email: '',
-      password: '',
-    });
   };
 
   return (
@@ -53,7 +46,7 @@ const Login = (props) => {
             </p>
           ) : (
             <Form 
-              onSubmit={handleFormSubmit}
+              onFinish={handleFormSubmit}
               name="basic"
               labelCol={{ span: 8 }}
               wrapperCol={{ span: 16 }}
@@ -89,7 +82,7 @@ const Login = (props) => {
               </Form.Item>
 
               <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button type="primary">
+                <Button type="primary" htmlType='submit'>
                   Submit
                 </Button>
               </Form.Item>
