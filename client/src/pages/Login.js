@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState} from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, Form, Input } from 'antd';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
@@ -33,6 +33,9 @@ const Login = (props) => {
       console.error(e);
     }
   };
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <main>
@@ -95,6 +98,16 @@ const Login = (props) => {
             </div>
           )}
         </div>
+      </div>
+
+      <div>
+        {location.pathname !== '/' && (
+          <Button
+            onClick={() => navigate(-1)}
+          >
+            &larr; Go Back
+          </Button>
+        )}
       </div>
     </main>
   );
