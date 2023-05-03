@@ -56,7 +56,7 @@ const Login = (props) => {
               <Form.Item
                 label="Email"
                 name="email"
-                rules={[{ required: true, message: 'Please input your username!' }]}
+                rules={[{ required: true, message: 'Please input your email!' }]}
               >
                 <Input
                   placeholder="Your email"

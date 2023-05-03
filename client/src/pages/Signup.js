@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { Button, Form, Input } from 'antd';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -26,7 +26,6 @@ const Signup = () => {
 
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
     console.log(formState);
 
     try {
@@ -41,27 +40,45 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
+    <main>
+      <div className="card">
+        <h2>Sign Up</h2>
+        <div>
+          {data ? (
+            <p>
+              Success! You may now head{' '}
+              <Link to="/pet-resq">back to the homepage.</Link>
+            </p>
+          ) : (
+            <Form 
+              onFinish={handleFormSubmit}
+              name="basic"
+              labelCol={{ span: 8 }}
+              wrapperCol={{ span: 16 }}
+              style={{ maxWidth: 600 }}
+              autoComplete="off"
+            >
+              <Form.Item
+                label="Name"
+                name="name"
+                rules={[{ required: true, message: 'Please input your name!' }]}
+              >
+                <Input
                   className="form-input"
-                  placeholder="Your username"
+                  placeholder="Your name"
                   name="name"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
                 />
-                <input
+              </Form.Item>
+
+              <Form.Item
+                label="Email"
+                name="email"
+                rules={[{ required: true, message: 'Please input your email!' }]}
+              >
+                <Input
                   className="form-input"
                   placeholder="Your email"
                   name="email"
@@ -69,30 +86,36 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
+              </Form.Item>
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
+              <Form.Item
+                label="Password"
+                name="password"
+                rules={[{ required: true, message: 'Please input your password!' }]}
+              >
+              <Input
+                className="form-input"
+                placeholder="Your password"
+                name="password"
+                type="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+              </Form.Item>
+              
+              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                <Button type="primary" htmlType='submit'>
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+          )}
+
+          {error && (
+            <div className="my-3 p-3 bg-danger text-white">
+              {error.message}
+            </div>
+          )}
         </div>
       </div>
     </main>
