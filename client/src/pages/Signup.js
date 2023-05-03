@@ -64,7 +64,6 @@ const Signup = () => {
                 rules={[{ required: true, message: 'Please input your name!' }]}
               >
                 <Input
-                  className="form-input"
                   placeholder="Your name"
                   name="name"
                   type="text"
@@ -79,7 +78,6 @@ const Signup = () => {
                 rules={[{ required: true, message: 'Please input your email!' }]}
               >
                 <Input
-                  className="form-input"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -94,7 +92,6 @@ const Signup = () => {
                 rules={[{ required: true, message: 'Please input your password!' }]}
               >
               <Input
-                className="form-input"
                 placeholder="Your password"
                 name="password"
                 type="password"
@@ -112,7 +109,7 @@ const Signup = () => {
           )}
 
           {error && (
-            <div className="my-3 p-3 bg-danger text-white">
+            <div>
               {error.message}
             </div>
           )}

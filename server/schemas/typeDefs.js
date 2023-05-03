@@ -20,12 +20,10 @@ const typeDefs = gql`
     answer: String
   }
 
-
   type Query {
     Users: [User]!
     User(UserId: ID!): User
     me: User
-
     FAQs: [FAQ]!
   }
 
