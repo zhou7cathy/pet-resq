@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pet-resq/static/css/main.65bb4b52.css",
+    "main.js": "/pet-resq/static/js/main.f9afb86a.js",
+    "static/media/animals.png": "/pet-resq/static/media/animals.35c77fbb57d2812b8f19.png",
+    "static/media/slogan.png": "/pet-resq/static/media/slogan.85e22672a365b11094ea.png",
+    "index.html": "/pet-resq/index.html",
+    "main.65bb4b52.css.map": "/pet-resq/static/css/main.65bb4b52.css.map",
+    "main.f9afb86a.js.map": "/pet-resq/static/js/main.f9afb86a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65bb4b52.css",
+    "static/js/main.f9afb86a.js"
+  ]
+}
