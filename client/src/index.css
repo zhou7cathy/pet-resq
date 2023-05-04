@@ -42,3 +42,13 @@ h5 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.report-pet-form {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-form-item-row {
+  display: flex;
+  justify-content: center;
+}
