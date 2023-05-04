@@ -18,10 +18,10 @@ const UserSchema = new Schema({
     required: true,
     minlength: 8,
   },
-  Animals: [
+  animals: [
     { 
       type: Schema.Types.ObjectId, 
-      ref: 'animal' 
+      ref: 'Animal',
     }
   ],
 });

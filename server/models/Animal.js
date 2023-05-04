@@ -27,7 +27,7 @@ const AnimalSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-		AnimalTypes: [
+		animalTypes: [
 			{ 
 				type: Schema.Types.ObjectId, 
 				ref: 'AnimalType' ,

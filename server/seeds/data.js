@@ -90,7 +90,7 @@ const animals= [
     "image":"cockatiel",
     "description":"Cookie is a lovely cockatiel with Grey body with yellow chest and orange cheeks. Please contact me if anyone has found our beloved Cookie at email: cookie@hotmail.com ",
     "postDate":"01/05/2023",
-    "AnimalTypes":"645391163309c7e5d69a0d11",
+    "animalTypes":"645391163309c7e5d69a0d11",
   },
   {
     "_id": "64538eebcfd9bafbe336727f",
@@ -100,7 +100,7 @@ const animals= [
     "image":"cat",
     "description":"Ozzy is a Ginger Domestic Medium Hair and wears a light blue collar with a bell. He's microchips and is deed, and is a timid cat. Please help find our Ozzy, we're desperate to have our fur-baby back. If you spot him please keep him with you or in your area and we will come to you. Reward offered if he's found. Contact number:0410665788. ",
     "postDate":"01/05/2023",
-    "AnimalTypes":"64538f6821a3ee262155efe9",
+    "animalTypes":"64538f6821a3ee262155efe9",
   }
 ]
 
