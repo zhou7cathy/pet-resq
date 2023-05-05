@@ -12,7 +12,9 @@ const typeDefs = gql`
 
   type Animal {
     _id: ID
+    name: String
     location: String
+    status: String
     image: String
     description: String
     postDate: String
@@ -42,7 +44,7 @@ const typeDefs = gql`
     FAQs: [FAQ]!
     animals:[Animal]!
     animal(animalId: ID!): Animal
-    animalTypes: [AnimalType]
+    animalTypes: [AnimalType]!
   }
 
   type Mutation {

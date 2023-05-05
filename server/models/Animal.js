@@ -30,13 +30,11 @@ const AnimalSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-		animalType: [
-			{ 
-				type: Schema.Types.ObjectId, 
-				ref: 'AnimalType' ,
-				required: true,
-			}
-		],
+		animalType: { 
+      type: Schema.Types.ObjectId, 
+      ref: 'AnimalType' ,
+      required: true,
+    },
   },
 );
 

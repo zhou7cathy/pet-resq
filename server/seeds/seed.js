@@ -10,10 +10,10 @@ db.once('open', async () => {
     await AnimalType.deleteMany({});
 
     
-    // await AnimalType.create(data.animalTypes);
-    // await Animal.create(data.animals);
-    // await User.create(data.userSeeds);
-    // await FAQ.create(data.faqs);
+    await AnimalType.create(data.animalTypes);
+    await Animal.create(data.animals);
+    await User.create(data.userSeeds);
+    await FAQ.create(data.faqs);
 
 
   } catch (err) {

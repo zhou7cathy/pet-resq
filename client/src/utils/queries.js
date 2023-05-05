@@ -20,7 +20,22 @@ export const QUERY_ANIMALS = gql`
       image
       description
       postDate
-      animalType
+      animalType {
+        _id
+      }
+    }
+    animalTypes {
+      _id
+      name
+    }
+  }
+`;
+
+export const QUERY_ANIMAL_TYPES = gql`
+  query allAnimalTypes {
+    animalTypes {
+      _id
+      name
     }
   }
 `;
