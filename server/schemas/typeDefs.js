@@ -16,12 +16,12 @@ const typeDefs = gql`
     image: String
     description: String
     postDate: String
-    animalTypes: [AnimalType]!
+    animalType: AnimalType
   }
 
   type AnimalType {
     _id: ID
-    name: String
+    name: String!
   }
 
   type Auth {
@@ -42,6 +42,7 @@ const typeDefs = gql`
     FAQs: [FAQ]!
     animals:[Animal]!
     animal(animalId: ID!): Animal
+    animalTypes: [AnimalType]
   }
 
   type Mutation {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_FAQS } from '../utils/queries';
 
-export default function Found() {
+export default function FAQs() {
   const { loading, data } = useQuery(QUERY_FAQS);
   const faqs = data?.FAQs || [];
 

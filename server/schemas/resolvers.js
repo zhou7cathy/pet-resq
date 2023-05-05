@@ -11,10 +11,14 @@ const resolvers = {
     User: async (parent, { UserId }) => {
       return User.findOne({ _id: UserId }).populate('animals');
     },
-    animals: async (parent, { UserId }) => {
-      const params = UserId ? { UserId } : {};
-      return Animal.find(params).sort({ postDate: -1 });
+    // animals: async (parent, { UserId }) => {
+    //   const params = UserId ? { UserId } : {};
+    //   return Animal.find(params).sort({ postDate: -1 });
+    // },
+    animals: async () => {
+      return Animal.find();
     },
+
     animal: async (parent, { animalId }) => {
       return Animal.findOne({ _id: animalId });
     },

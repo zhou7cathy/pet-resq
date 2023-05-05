@@ -10,6 +10,21 @@ export const QUERY_FAQS = gql`
   }
 `;
 
+export const QUERY_ANIMALS = gql`
+  query allAnimals {
+    animals {
+      _id
+      status
+      name
+      location
+      image
+      description
+      postDate
+      animalType
+    }
+  }
+`;
+
 export const QUERY_PROFILES = gql`
   query allProfiles {
     profiles {

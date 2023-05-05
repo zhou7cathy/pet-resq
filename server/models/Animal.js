@@ -2,6 +2,9 @@ const { Schema, model } = require('mongoose');
 
 const AnimalSchema = new Schema(
   {
+    _id: {
+      type: Schema.Types.ObjectId,
+    },
     status: {
       type: String,
       required: true,
@@ -27,7 +30,7 @@ const AnimalSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-		animalTypes: [
+		animalType: [
 			{ 
 				type: Schema.Types.ObjectId, 
 				ref: 'AnimalType' ,

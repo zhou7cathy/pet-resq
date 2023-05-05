@@ -9,10 +9,12 @@ db.once('open', async () => {
     await FAQ.deleteMany({});
     await AnimalType.deleteMany({});
 
-    await Animal.create(data.animals);
-    await User.create(data.userSeeds);
-    await FAQ.create(data.faqs);
-    await AnimalType.create(data.animalTypes);
+    
+    // await AnimalType.create(data.animalTypes);
+    // await Animal.create(data.animals);
+    // await User.create(data.userSeeds);
+    // await FAQ.create(data.faqs);
+
 
   } catch (err) {
     console.error(err);
