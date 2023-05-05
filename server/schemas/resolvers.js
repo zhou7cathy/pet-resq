@@ -5,13 +5,19 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     Users: async () => {
-      return User.find();
+      return User.find().populate('animals');
     },
 
     User: async (parent, { UserId }) => {
-      return User.findOne({ _id: UserId });
+      return User.findOne({ _id: UserId }).populate('animals');
     },
-
+    animals: async (parent, { UserId }) => {
+      const params = UserId ? { UserId } : {};
+      return Animal.find(params).sort({ postDate: -1 });
+    },
+    animal: async (parent, { animalId }) => {
+      return Animal.findOne({ _id: animalId });
+    },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
       if (context.user) {

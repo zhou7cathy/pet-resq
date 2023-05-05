@@ -40,6 +40,8 @@ const typeDefs = gql`
     User(UserId: ID!): User
     me: User
     FAQs: [FAQ]!
+    animals:[Animal]!
+    animal(animalId: ID!): Animal
   }
 
   type Mutation {
