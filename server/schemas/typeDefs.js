@@ -44,6 +44,7 @@ const typeDefs = gql`
     FAQs: [FAQ]!
     lostAnimals:[Animal]!
     foundAnimals:[Animal]!
+    animals(UserId: ID!): Animal
     animal(animalId: ID!): Animal
     animalTypes: [AnimalType]!
   }

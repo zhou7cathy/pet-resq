@@ -10,6 +10,27 @@ export const QUERY_FAQS = gql`
   }
 `;
 
+export const ANIMALS = gql`
+  query allAnimals {
+    animals {
+      _id
+      status
+      name
+      location
+      image
+      description
+      postDate
+      animalType {
+        _id
+      }
+    }
+    animalTypes {
+      _id
+      name
+    }
+  }
+`;
+
 export const QUERY_LOST_ANIMALS = gql`
   query lostAnimals {
     lostAnimals {
@@ -63,20 +84,32 @@ export const QUERY_ANIMAL_TYPES = gql`
 
 export const QUERY_PROFILES = gql`
   query allProfiles {
-    profiles {
+    Users {
       _id
       name
-      # animals
+      animals
     }
   }
 `;
 
-export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
+export const QUERY_USER = gql`
+  query user($userId: ID!) {
+    user(userId: $userId) {
       _id
       name
-      # animals
+      animals {
+        _id
+        name
+        location
+        status
+        image
+        description
+        postDate
+        animalType{
+          _id
+          name
+        }
+      }
     }
   }
 `;
@@ -86,7 +119,19 @@ export const QUERY_ME = gql`
     me {
       _id
       name
-      # animals
+      animals {
+        _id
+        name
+        location
+        status
+        image
+        description
+        postDate
+        animalType{
+          _id
+          name
+        }
+      }
     }
   }
 `;

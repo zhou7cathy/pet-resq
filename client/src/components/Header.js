@@ -18,9 +18,16 @@ export default function Header() {
       <img src={Slogan} alt='pet resQ slogan' />
         <Space wrap>
           {Auth.loggedIn() ? (
-            <Button className="logout-btn" onClick={logout}>
-              Logout
-            </Button>
+            <>
+              <Button className="logout-btn" onClick={logout}>
+                Logout
+              </Button>
+              <Link to="/me">
+                <Button className="profile-btn">
+                  View My Profile
+                </Button>
+              </Link>
+            </>
           ) : (
             <>
               <Link className="login-btn" to="/Login">

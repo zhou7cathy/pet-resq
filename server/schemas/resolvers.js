@@ -8,13 +8,14 @@ const resolvers = {
       return User.find().populate('animals');
     },
 
-    User: async (parent, { UserId }) => {
-      return User.findOne({ _id: UserId }).populate('animals');
+    User: async (parent, { userId }) => {
+      return User.findOne({ _id: userId }).populate('animals');
     },
-    // animals: async (parent, { UserId }) => {
-    //   const params = UserId ? { UserId } : {};
-    //   return Animal.find(params).sort({ postDate: -1 });
-    // },
+    animals: async (parent, { userId }) => {
+      const params = userId ? { userId } : {};
+      return Animal.find(params).sort({ postDate: -1 });
+    },
+    
     lostAnimals: async () => {
       return Animal.find({status: 'Lost Pet'});
     },
