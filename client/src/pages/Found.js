@@ -1,10 +1,10 @@
 import * as _ from "lodash";
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { QUERY_FOUNDANIMALS } from '../utils/queries';
+import { QUERY_FOUND_ANIMALS } from '../utils/queries';
 
 export default function Found() {
-    const { loading, data } = useQuery(QUERY_FOUNDANIMALS);
+    const { loading, data } = useQuery(QUERY_FOUND_ANIMALS);
 
   // Deep clone so that can add extra property to the readonly object.
   const foundAnimals = _.cloneDeep(data?.foundAnimals) || [];

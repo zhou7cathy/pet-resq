@@ -10,7 +10,7 @@ export const QUERY_FAQS = gql`
   }
 `;
 
-export const QUERY_LOSTANIMALS = gql`
+export const QUERY_LOST_ANIMALS = gql`
   query lostAnimals {
     lostAnimals {
       _id
@@ -31,7 +31,7 @@ export const QUERY_LOSTANIMALS = gql`
   }
 `;
 
-export const QUERY_FOUNDANIMALS = gql`
+export const QUERY_FOUND_ANIMALS = gql`
   query foundAnimals {
     foundAnimals {
       _id
