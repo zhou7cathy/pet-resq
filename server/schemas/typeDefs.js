@@ -42,7 +42,8 @@ const typeDefs = gql`
     User(UserId: ID!): User
     me: User
     FAQs: [FAQ]!
-    animals:[Animal]!
+    lostAnimals:[Animal]!
+    foundAnimals:[Animal]!
     animal(animalId: ID!): Animal
     animalTypes: [AnimalType]!
   }

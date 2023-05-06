@@ -15,6 +15,7 @@ const userSeeds= [
     "name": "Rehana",
     "email": "Rehana666@hotmail.com",
     "password": "password1",
+    "animals": "64538eebcfd9bafbe3367321",
   }
 ]
 
@@ -94,6 +95,15 @@ const animals= [
   },
   {
     "_id": "64538eebcfd9bafbe336727f",
+    "status": "Found Pet",
+    "location":"perth",
+    "image":"Galah",
+    "description":"Has anyone lost this Pink and Gray Galah. It landed in my back yard. We live in Clarkson near the train station. Contact number: 0410026465",
+    "postDate":"03/05/2023",
+    "animalType":"645391163309c7e5d69a0d11",
+  },
+    {
+    "_id": "64538eebcfd9bafbe3367321",
     "status": "Lost Pet",
     "name": "Ozzy",
     "location":"perth",

@@ -15,8 +15,12 @@ const resolvers = {
     //   const params = UserId ? { UserId } : {};
     //   return Animal.find(params).sort({ postDate: -1 });
     // },
-    animals: async () => {
-      return Animal.find();
+    lostAnimals: async () => {
+      return Animal.find({status: 'Lost Pet'});
+    },
+
+    foundAnimals: async () => {
+      return Animal.find({status: 'Found Pet'});
     },
     
     animalTypes: async () => {

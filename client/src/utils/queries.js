@@ -10,9 +10,30 @@ export const QUERY_FAQS = gql`
   }
 `;
 
-export const QUERY_ANIMALS = gql`
-  query allAnimals {
-    animals {
+export const QUERY_LOSTANIMALS = gql`
+  query lostAnimals {
+    lostAnimals {
+      _id
+      status
+      name
+      location
+      image
+      description
+      postDate
+      animalType {
+        _id
+      }
+    }
+    animalTypes {
+      _id
+      name
+    }
+  }
+`;
+
+export const QUERY_FOUNDANIMALS = gql`
+  query foundAnimals {
+    foundAnimals {
       _id
       status
       name
