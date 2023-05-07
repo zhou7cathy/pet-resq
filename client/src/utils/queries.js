@@ -78,7 +78,19 @@ export const QUERY_PROFILES = gql`
     Users {
       _id
       name
-      animals
+      animals {
+        _id
+        name
+        location
+        status
+        image
+        description
+        postDate
+        animalType{
+          _id
+          name
+        }
+      }
     }
   }
 `;

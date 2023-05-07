@@ -38,6 +38,24 @@ const Profile = () => {
       <h2>
         Your Profile
       </h2>
+      <div>
+        {user.animals && user.animals.map((animal) => (
+        <div key={animal._id}>
+          <p>
+            {animal.status} 
+          </p>
+          <p>
+            {animal.name} 
+          </p>
+          <p>
+            {animal.description} 
+          </p>
+          <p>
+            {animal.animalType.name} 
+          </p>
+        </div>
+      ))}
+      </div>
     </div>
   );
 };
