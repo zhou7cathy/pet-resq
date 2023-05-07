@@ -2,22 +2,15 @@ import { PlusOutlined } from '@ant-design/icons';
 
 import {
   Button,
-  Cascader,
-  Checkbox,
-  DatePicker,
   Form,
   Input,
-  InputNumber,
   Radio,
   Select,
-  Switch,
-  TreeSelect,
   Upload,
 } from 'antd';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
 const normFile = (e: any) => {
@@ -36,10 +29,10 @@ export default function ReportPet() {
       <h3> Report Pet Form</h3>
       <div className='report-pet-form'>
         <Form
-          labelCol={{ span: 4 }}
-          wrapperCol={{ span: 14 }}
+          labelCol={{ span: 10 }}
+          wrapperCol={{ span: 34 }}
           layout="horizontal"
-          style={{ Width: 600 }}
+          style={{ Width: 600, }}
         >
           <Form.Item label="Pet Status">
             <Radio.Group>
