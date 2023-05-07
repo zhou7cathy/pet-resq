@@ -38,6 +38,6 @@ const AnimalSchema = new Schema(
   },
 );
 
-const Animal = model('animal', AnimalSchema);
+const Animal = model('Animal', AnimalSchema);
 
 module.exports = Animal;

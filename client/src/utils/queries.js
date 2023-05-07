@@ -22,11 +22,8 @@ export const ANIMALS = gql`
       postDate
       animalType {
         _id
+        name
       }
-    }
-    animalTypes {
-      _id
-      name
     }
   }
 `;
@@ -43,11 +40,8 @@ export const QUERY_LOST_ANIMALS = gql`
       postDate
       animalType {
         _id
+        name
       }
-    }
-    animalTypes {
-      _id
-      name
     }
   }
 `;
@@ -64,11 +58,8 @@ export const QUERY_FOUND_ANIMALS = gql`
       postDate
       animalType {
         _id
+        name
       }
-    }
-    animalTypes {
-      _id
-      name
     }
   }
 `;

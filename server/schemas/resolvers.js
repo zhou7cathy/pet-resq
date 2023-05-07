@@ -13,15 +13,15 @@ const resolvers = {
     },
     animals: async (parent, { userId }) => {
       const params = userId ? { userId } : {};
-      return Animal.find(params).sort({ postDate: -1 });
+      return Animal.find(params).populate('animalType').sort({ postDate: -1 });
     },
     
     lostAnimals: async () => {
-      return Animal.find({status: 'Lost Pet'});
+      return Animal.find({status: 'Lost Pet'}).populate('animalType');
     },
 
     foundAnimals: async () => {
-      return Animal.find({status: 'Found Pet'});
+      return Animal.find({status: 'Found Pet'}).populate('animalType');
     },
     
     animalTypes: async () => {

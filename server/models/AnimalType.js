@@ -12,6 +12,6 @@ const animalTypeSchema = new Schema(
   },
 );
 
-const AnimalType = model('animalType', animalTypeSchema);
+const AnimalType = model('AnimalType', animalTypeSchema);
 
 module.exports = AnimalType;

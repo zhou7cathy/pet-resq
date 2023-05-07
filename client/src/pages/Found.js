@@ -1,18 +1,10 @@
-import * as _ from "lodash";
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_FOUND_ANIMALS } from '../utils/queries';
 
 export default function Found() {
-    const { loading, data } = useQuery(QUERY_FOUND_ANIMALS);
-
-  // Deep clone so that can add extra property to the readonly object.
-  const foundAnimals = _.cloneDeep(data?.foundAnimals) || [];
-  const animalTypes = data?.animalTypes || [];
-
-  foundAnimals.forEach(a => {
-    a['animalTypeName'] = animalTypes.find((t) => t._id === a.animalType._id).name;
-  });
+  const { loading, data } = useQuery(QUERY_FOUND_ANIMALS);
+  const foundAnimals = data?.foundAnimals || [];
 
   return (
     <div>
@@ -34,7 +26,7 @@ export default function Found() {
                   {animal.description} 
                 </p>
                 <p>
-                  {animal.animalTypeName} 
+                  {animal.animalType.name} 
                 </p>
               </div>
             ))}
