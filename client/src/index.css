@@ -52,3 +52,21 @@ h5 {
   display: flex;
   justify-content: center;
 }
+
+.post-container {
+  display: flex;
+  margin: 0 50px 30px 50px;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.post-img {
+  object-fit: cover;
+  margin: 10px;
+}
+
+.post-detail {
+  height:250px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
