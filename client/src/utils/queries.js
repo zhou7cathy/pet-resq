@@ -65,7 +65,7 @@ export const QUERY_FOUND_ANIMALS = gql`
 `;
 
 export const QUERY_ANIMAL_TYPES = gql`
-  query allAnimalTypes {
+  query animalTypes {
     animalTypes {
       _id
       name

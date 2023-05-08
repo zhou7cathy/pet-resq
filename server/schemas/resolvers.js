@@ -70,7 +70,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addAnimal: async (parent, { status, name, location, image, description, postDate, animalType }, context) => {
+    addAnimal: async (parent, { status, name, location, image, description, animalType }, context) => {
       if (context.user) {
         const animal = await Animal.create({
           status,
@@ -78,13 +78,16 @@ const resolvers = {
           location,
           image,
           description,
-          postDate,
           animalType,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { animals: animal._id } }
+          { $addToSet: { animals: animal._id } },
+          {
+            new: true,
+            runValidators: true,
+          }
         );
 
         return animal;

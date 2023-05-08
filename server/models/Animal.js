@@ -1,4 +1,5 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const AnimalSchema = new Schema(
   {
@@ -29,6 +30,7 @@ const AnimalSchema = new Schema(
 		postDate: {
       type: Date,
       default: Date.now,
+      get: (timestamp) => dateFormat(timestamp),
     },
 		animalType: { 
       type: Schema.Types.ObjectId, 
@@ -37,6 +39,15 @@ const AnimalSchema = new Schema(
     },
   },
 );
+
+// set up pre-save middleware to create id
+AnimalSchema.pre('save', async function (next) {
+  if (this.isNew) {
+    this._id = new Types.ObjectId()
+  }
+
+  next();
+});
 
 const Animal = model('Animal', AnimalSchema);
 
