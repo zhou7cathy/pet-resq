@@ -3,7 +3,7 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
-import { Button} from 'antd';
+import { Button, Image} from 'antd';
 
 const Profile = () => {
   const { userId } = useParams();
@@ -41,19 +41,35 @@ const Profile = () => {
       </h2>
       <div>
         {user.animals && user.animals.map((animal) => (
-        <div key={animal._id}>
+        <div key={animal._id} className='post-container'>
+          <div>
+          {animal.image.map((image) => (
+            <Image
+              className='post-img'
+              key={image}
+              width={300}
+              height={200}
+              src={image}
+            />
+            ))}
+          </div>
+          <div className='post-detail'>
           <p>
-            {animal.status} 
+            Post Since: {animal.postDate} 
           </p>
           <p>
-            {animal.name} 
+            Pet Status: {animal.status} 
           </p>
           <p>
-            {animal.description} 
+            Aniaml Type: {animal.animalType.name} 
           </p>
           <p>
-            {animal.animalType.name} 
+            Name: {animal.name} 
           </p>
+          <p>
+            Description: {animal.description} 
+          </p>
+          </div>
         </div>
       ))}
       </div>

@@ -14,7 +14,9 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
-app.use(express.urlencoded({ extended: false }));
+var bodyParser = require('body-parser');
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {

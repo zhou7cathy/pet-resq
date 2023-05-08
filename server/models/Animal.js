@@ -42,7 +42,7 @@ const AnimalSchema = new Schema(
 
 // set up pre-save middleware to create id
 AnimalSchema.pre('save', async function (next) {
-  if (this.isNew) {
+  if (this.isNew && !this._id) {
     this._id = new Types.ObjectId()
   }
 
