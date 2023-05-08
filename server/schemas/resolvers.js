@@ -70,6 +70,27 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addAnimal: async (parent, { status, name, location, image, description, postDate, animalType }, context) => {
+      if (context.user) {
+        const animal = await Animal.create({
+          status,
+          name,
+          location,
+          image,
+          description,
+          postDate,
+          animalType,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { animals: animal._id } }
+        );
+
+        return animal;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 
