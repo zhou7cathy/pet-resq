@@ -1,6 +1,9 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_LOST_ANIMALS } from '../utils/queries';
+import {
+  Image,
+} from 'antd';
 
 export default function Lost() {
   const { loading, data } = useQuery(QUERY_LOST_ANIMALS);
@@ -28,6 +31,13 @@ export default function Lost() {
                 <p>
                   {animal.animalType.name} 
                 </p>
+                {animal.image.map((image) => (
+                <Image
+                  key={image}
+                  width={200}
+                  src={image}
+                />
+                ))}
               </div>
             ))}
             </div>

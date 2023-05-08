@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_ANIMAL = gql`
-  mutation addAnimal($status: String!, $name: String, $location: String!, $image: String!, $description: String!, $animalType: ID!) {
+  mutation addAnimal($status: String!, $name: String, $location: String!, $image: [String]!, $description: String!, $animalType: ID!) {
     addAnimal(status: $status, name: $name, location: $location, image: $image, description: $description, animalType: $animalType) {
       _id
       status

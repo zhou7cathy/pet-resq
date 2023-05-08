@@ -14,7 +14,6 @@ import { useMutation } from '@apollo/client';
 import { ADD_ANIMAL } from '../utils/mutations';
 import { useQuery } from '@apollo/client';
 import { QUERY_ANIMAL_TYPES } from '../utils/queries';
-import Auth from '../utils/auth';
 
 const { TextArea } = Input;
 
@@ -34,7 +33,7 @@ const ReportPet = (props) => {
     status: '', 
     name: '' ,
     location: '', 
-    image: '' ,
+    image: [] ,
     description: '', 
     animalType: '' ,
   });
@@ -51,12 +50,35 @@ const ReportPet = (props) => {
   };
 
   const animalTypeHandler = (value) => {
-    const { animalType } = value;
-
     setFormState({
       ...formState,
       animalType: value,
     });
+  };
+
+  const dummyRequest = ({file, onSuccess}) => {
+    onSuccess("ok");
+  }
+
+  const imageHandler = (value) => {
+    value?.event?.preventDefault();
+
+    const file = value.file.originFileObj;
+
+    // Encode the file using the FileReader API
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      console.log(reader.result);
+
+      var images = [...formState.image];
+      images.push(reader.result);
+
+      setFormState({
+        ...formState,
+        image: images,
+      });
+    };
+    reader.readAsDataURL(file);
   };
 
   // submit form
@@ -130,22 +152,13 @@ const ReportPet = (props) => {
             </Select>
           </Form.Item>
 
-          {/* <Form.Item label="Upload Photo" valuePropName="fileList" getValueFromEvent={normFile}>
-            <Upload action="/upload.do" listType="picture-card">
+          <Form.Item label="Upload Photo" valuePropName="fileList">
+            <Upload onChange={imageHandler} customRequest={dummyRequest} listType="picture-card">
               <div>
                 <PlusOutlined />
                 <div style={{ marginTop: 8 }}>Upload the Photo of Pet Here</div>
               </div>
             </Upload>
-          </Form.Item> */}
-
-          {/* temp */}
-          <Form.Item label="image">
-            <Input 
-              name="image"
-              value={formState.image}
-              onChange={handleChange}
-            />
           </Form.Item>
 
           <Form.Item label="Description">
