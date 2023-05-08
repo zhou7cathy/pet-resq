@@ -88,6 +88,8 @@ const ReportPet = (props) => {
       const { data } = await addAnimal({
         variables: { ...formState },
       });
+
+      window.location.assign('/me');
       
     } catch (e) {
       console.error(e);
