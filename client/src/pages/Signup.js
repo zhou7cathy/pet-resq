@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button, Form, Input } from 'antd';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
@@ -12,7 +12,7 @@ const Signup = () => {
     email: '',
     password: '',
   });
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { error }] = useMutation(ADD_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -47,12 +47,6 @@ const Signup = () => {
       <div className="card">
         <h2>Sign Up</h2>
         <div>
-          {data ? (
-            <p>
-              Success! You may now head{' '}
-              <Link to="/pet-resq">back to the homepage.</Link>
-            </p>
-          ) : (
             <Form 
               onFinish={handleFormSubmit}
               name="basic"
@@ -109,7 +103,6 @@ const Signup = () => {
                 </Button>
               </Form.Item>
             </Form>
-          )}
 
           {error && (
             <div>
