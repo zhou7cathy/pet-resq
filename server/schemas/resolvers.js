@@ -94,6 +94,27 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    removeAnimal: async (parent, { animalId }, context) => {
+      if (context.user) {
+        const animal = await Animal.findOneAndDelete({
+          _id: animalId,
+          status,
+          name,
+          location,
+          image,
+          description,
+          animalType,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { animals: animal._id } }
+        );
+
+        return animal;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 

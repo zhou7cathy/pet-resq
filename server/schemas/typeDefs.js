@@ -53,6 +53,7 @@ const typeDefs = gql`
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addAnimal(status: String!, name: String, location: String!, image: [String]!, description: String!, animalType: ID!): Animal
+    removeAnimal(animalId: ID!): Animal
   }
 `;
 
