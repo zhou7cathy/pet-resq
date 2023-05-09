@@ -69,6 +69,14 @@ const Profile = () => {
           <p>
             Description: {animal.description} 
           </p>
+            <div className='post-btns'>
+              <Button className='post-btn' type="primary" htmlType='submit'>
+                Update
+              </Button>
+              <Button className='post-btn' type="primary" htmlType='submit'>
+                Delete
+              </Button>
+            </div>
           </div>
         </div>
       ))}

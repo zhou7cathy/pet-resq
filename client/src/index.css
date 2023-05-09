@@ -70,3 +70,12 @@ h5 {
   margin-left: 20px;
   margin-bottom: 20px;
 }
+
+.post-btns {
+display: flex;
+justify-content: center;
+}
+
+.post-btn {
+  margin: 0 5px;
+  }
