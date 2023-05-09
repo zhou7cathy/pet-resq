@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/pet-resq/static/css/main.073c9b0a.css",
-    "main.js": "/pet-resq/static/js/main.c895759b.js",
-    "static/js/787.ad6ff1af.chunk.js": "/pet-resq/static/js/787.ad6ff1af.chunk.js",
-    "static/media/logo.svg": "/pet-resq/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/pet-resq/static/css/main.4c81f393.css",
+    "main.js": "/pet-resq/static/js/main.2a1938a6.js",
+    "static/media/animals.png": "/pet-resq/static/media/animals.35c77fbb57d2812b8f19.png",
+    "static/media/slogan.png": "/pet-resq/static/media/slogan.85e22672a365b11094ea.png",
     "index.html": "/pet-resq/index.html",
-    "main.073c9b0a.css.map": "/pet-resq/static/css/main.073c9b0a.css.map",
-    "main.c895759b.js.map": "/pet-resq/static/js/main.c895759b.js.map",
-    "787.ad6ff1af.chunk.js.map": "/pet-resq/static/js/787.ad6ff1af.chunk.js.map"
+    "main.4c81f393.css.map": "/pet-resq/static/css/main.4c81f393.css.map",
+    "main.2a1938a6.js.map": "/pet-resq/static/js/main.2a1938a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.c895759b.js"
+    "static/css/main.4c81f393.css",
+    "static/js/main.2a1938a6.js"
   ]
 }
