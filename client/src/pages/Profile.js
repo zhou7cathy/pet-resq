@@ -1,36 +1,36 @@
 import React from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-// import { useMutation } from '@apollo/client';
-// import { REMOVE_ANIMAL } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
+import { REMOVE_ANIMAL } from '../utils/mutations';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 import { Button, Image} from 'antd';
 
 const Profile = () => {
-    //Remove animal post
-    // const [removeAnimal, { error }] = useMutation(REMOVE_ANIMAL, {
-    //   update(cache, { data: { removeAnimal } }) {
-    //     try {
-    //       cache.writeQuery({
-    //         query: QUERY_ME,
-    //         data: { me: removeAnimal },
-    //       });
-    //     } catch (e) {
-    //       console.error(e);
-    //     }
-    //   },
-    // });
+    // Remove animal post
+    const [removeAnimal, { error }] = useMutation(REMOVE_ANIMAL, {
+      update(cache, { data: { removeAnimal } }) {
+        try {
+          cache.writeQuery({
+            query: QUERY_ME,
+            data: { me: removeAnimal },
+          });
+        } catch (e) {
+          console.error(e);
+        }
+      },
+    });
   
-    // const handleRemoveAnimal = async (animal) => {
-    //   try {
-    //     const { data } = await removeAnimal({
-    //       variables: { animal },
-    //     });
-    //   } catch (err) {
-    //     console.error(err);
-    //   }
-    // };
+    const handleRemoveAnimal = async (animal) => {
+      try {
+        const { data } = await removeAnimal({
+          variables: { animalId: animal._id },
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
   const { userId } = useParams();
 
@@ -104,19 +104,19 @@ const Profile = () => {
                 Update
               </Button>
               <Button className='post-btn' type="primary" htmlType='submit' 
-              // onClick={() => handleRemoveAnimal(animal)}
+              onClick={() => handleRemoveAnimal(animal)}
               >
                 Delete
               </Button>
             </div>
-            {/* {error && (
+            {error && (
               <div>{error.message}</div>
-            )} */}
+            )}
           </div>
         </div>
       ))}
       </div>
-      <Link to="/">
+      <Link to="/pet-resq">
         <Button>
           &larr; Go Back
         </Button>
