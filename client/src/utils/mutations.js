@@ -40,3 +40,20 @@ export const ADD_ANIMAL = gql`
     }
   }
 `;
+
+export const REMOVE_ANIMAL = gql`
+  mutation removeAnimal($status: String!, $name: String, $location: String!, $image: [String]!, $description: String!, $animalType: ID!) {
+    removeAnimal(status: $status, name: $name, location: $location, image: $image, description: $description, animalType: $animalType) {
+      _id
+      status
+      name
+      location
+      image
+      description
+      postDate
+      animalType{
+        _id
+      }
+    }
+  }
+`;
