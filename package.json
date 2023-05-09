@@ -1,7 +1,7 @@
 {
   "name": "pet-resq",
   "version": "0.1.0",
-  "homepage": "https://zhou7cathy.github.io/pet-resq",
+  "homepage": "https://zhou7cathy.github.io",
   "description": "",
   "main": "server/server.js",
   "scripts": {
