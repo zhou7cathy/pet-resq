@@ -1,11 +1,37 @@
 import React from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
+// import { useMutation } from '@apollo/client';
+// import { REMOVE_ANIMAL } from '../utils/mutations';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 import { Button, Image} from 'antd';
 
 const Profile = () => {
+    //Remove animal post
+    // const [removeAnimal, { error }] = useMutation(REMOVE_ANIMAL, {
+    //   update(cache, { data: { removeAnimal } }) {
+    //     try {
+    //       cache.writeQuery({
+    //         query: QUERY_ME,
+    //         data: { me: removeAnimal },
+    //       });
+    //     } catch (e) {
+    //       console.error(e);
+    //     }
+    //   },
+    // });
+  
+    // const handleRemoveAnimal = async (animal) => {
+    //   try {
+    //     const { data } = await removeAnimal({
+    //       variables: { animal },
+    //     });
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // };
+
   const { userId } = useParams();
 
   const { loading, data } = useQuery(
@@ -32,6 +58,10 @@ const Profile = () => {
         links above to sign up or log in!
       </h4>
     );
+  }
+
+  if (!user.animals.length) {
+    return <h3>Hello {user.name}. You haven't post any lost or found pet yet.</h3>;
   }
 
   return (
@@ -73,10 +103,15 @@ const Profile = () => {
               <Button className='post-btn' type="primary" htmlType='submit'>
                 Update
               </Button>
-              <Button className='post-btn' type="primary" htmlType='submit'>
+              <Button className='post-btn' type="primary" htmlType='submit' 
+              // onClick={() => handleRemoveAnimal(animal)}
+              >
                 Delete
               </Button>
             </div>
+            {/* {error && (
+              <div>{error.message}</div>
+            )} */}
           </div>
         </div>
       ))}

@@ -94,7 +94,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeAnimal: async (parent, { animalId }, context) => {
+    removeAnimal: async (parent, { animalId, status, name, location, image, description, postDate, animalType }, context) => {
       if (context.user) {
         const animal = await Animal.findOneAndDelete({
           _id: animalId,
@@ -103,6 +103,7 @@ const resolvers = {
           location,
           image,
           description,
+          postDate,
           animalType,
         });
 
