@@ -11,13 +11,9 @@ export default function AboutMe() {
       <div>
         <h3>
           What We Do? Free pet finding tools!<br></br>
-          Lost or found pet?
+          Lost or found pet?<br></br>
+          Log In or Sign Up to report a pet!
         </h3>
-        <Link  to="/report-pet">
-          <Space wrap>
-            <Button>Report Pet</Button>
-          </Space>
-        </Link>
       </div>
     </div>
   )

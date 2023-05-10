@@ -167,6 +167,7 @@ const ReportPet = (props) => {
             <TextArea 
               rows={4} 
               name="description"
+              placeholder='Please Enter the Pet Description and Contact Detail Here.'
               value={formState.description}
               onChange={handleChange}
             />

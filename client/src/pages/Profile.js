@@ -5,7 +5,7 @@ import { REMOVE_ANIMAL } from '../utils/mutations';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
-import { Carousel, Button, Image} from 'antd';
+import { Carousel, Button, Space, Image} from 'antd';
 
 const Profile = () => {
     // Remove animal post
@@ -61,14 +61,47 @@ const Profile = () => {
   }
 
   if (!user.animals.length) {
-    return <h3>Hello {user.name}. You haven't post any lost or found pet yet.</h3>;
+    return (
+      <div>
+        <div className='profile'>
+        <h2>
+          Your Profile
+        </h2>
+        <h3>
+          Hello {user.name}. You haven't report any lost or found pet yet. <br></br>
+          Press report button to report pet.
+        </h3>
+        <Link  to="/report-pet">
+            <Space wrap>
+              <Button>Report Pet</Button>
+            </Space>
+        </Link>
+      </div>
+        <Link to="/">
+          <Button>
+            &larr; Home
+          </Button>
+        </Link>
+      </div>
+    )
   }
 
   return (
     <div>
-      <h2>
-        Your Profile
-      </h2>
+      <div className='profile'>
+        <h2>
+          Your Profile
+        </h2>
+        <h3>
+          Hello {user.name}. Your report has been posted to lost and found page. <br></br>
+          Press report button to report another pet.
+        </h3>
+        <Link  to="/report-pet">
+          <Space wrap>
+            <Button>Report Pet</Button>
+          </Space>
+        </Link>
+      </div>
       <div>
         {user.animals && user.animals.map((animal) => (
         <div key={animal._id} className='post-container'>
@@ -122,7 +155,7 @@ const Profile = () => {
       </div>
       <Link to="/">
         <Button>
-          &larr; Go Back
+          &larr; Home
         </Button>
       </Link>
     </div>

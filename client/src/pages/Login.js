@@ -38,7 +38,7 @@ const Login = (props) => {
   return (
     <main>
       <div className="card">
-        <h3>Login</h3>
+        <h3>Log In</h3>
         <div>
           <Form 
             onFinish={handleFormSubmit}
