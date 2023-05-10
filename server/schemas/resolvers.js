@@ -18,11 +18,11 @@ const resolvers = {
     },
     
     lostAnimals: async () => {
-      return Animal.find({status: 'Lost Pet'}).populate('animalType');
+      return Animal.find({status: 'Lost Pet'}).populate('animalType').sort({ postDate: -1 });
     },
 
     foundAnimals: async () => {
-      return Animal.find({status: 'Found Pet'}).populate('animalType');
+      return Animal.find({status: 'Found Pet'}).populate('animalType').sort({ postDate: -1 });
     },
     
     animalTypes: async () => {
@@ -37,7 +37,8 @@ const resolvers = {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate({
           path: 'animals',
-          populate: { path: 'animalType' }
+          populate: { path: 'animalType' },
+          options: {sort: {'postDate': -1}}
       });
       }
       throw new AuthenticationError('You need to be logged in!');
