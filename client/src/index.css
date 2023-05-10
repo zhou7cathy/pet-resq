@@ -69,8 +69,8 @@ h3 {
 }
 
 .post-btns {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin-left: 80%;
 }
 
 .post-container {
@@ -83,6 +83,7 @@ h3 {
 
 .post-detail {
   height:auto;
+  width: 100%;
   margin-left: 20px;
   margin-bottom: 20px;
 }
