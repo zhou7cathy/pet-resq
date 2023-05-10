@@ -18,9 +18,9 @@ export default function Header() {
         <img className='pet-resq-logo'src={PetResQ} alt='pet resQ logo' />
         <img className='slogan' src={Slogan} alt='pet resQ slogan' />
       </div>
-        <Space wrap>
+        <Space wrap className='main-buttons'>
           {Auth.loggedIn() ? (
-            <div className='main-buttons'>
+            <div>
               <Button className="logout-btn" onClick={logout}>
                 Logout
               </Button>
