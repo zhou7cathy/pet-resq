@@ -91,6 +91,9 @@ const Profile = () => {
             Pet Status: {animal.status} 
           </p>
           <p>
+            Location: {animal.location} 
+          </p>
+          <p>
             Aniaml Type: {animal.animalType.name} 
           </p>
           <p>
@@ -100,11 +103,8 @@ const Profile = () => {
             Description: {animal.description} 
           </p>
             <div className='post-btns'>
-              <Button className='post-btn' type="primary" htmlType='submit'>
-                Update
-              </Button>
               <Button className='post-btn' type="primary" htmlType='submit' 
-              onClick={() => handleRemoveAnimal(animal)}
+                onClick={() => handleRemoveAnimal(animal)}
               >
                 Delete
               </Button>

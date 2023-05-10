@@ -36,6 +36,9 @@ export default function Lost() {
                     Pet Status: {animal.status} 
                   </p>
                   <p>
+                    Location: {animal.location} 
+                  </p>
+                  <p>
                     Aniaml Type: {animal.animalType.name} 
                   </p>
                   <p>

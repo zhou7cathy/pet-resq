@@ -33,16 +33,16 @@ export default function Found() {
                     Post Since: {animal.postDate} 
                   </p>
                   <p>
-                    {animal.status} 
+                    Pet Status: {animal.status} 
                   </p>
                   <p>
-                    {animal.animalType.name} 
+                    Location: {animal.location} 
                   </p>
                   <p>
-                    {animal.name} 
+                    Aniaml Type: {animal.animalType.name} 
                   </p>
                   <p>
-                    {animal.description} 
+                    Description: {animal.description} 
                   </p>
                 </div>
               </div>
