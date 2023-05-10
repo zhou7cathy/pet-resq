@@ -133,9 +133,11 @@ const Profile = () => {
           <p>
             Aniaml Type: {animal.animalType.name} 
           </p>
+          {animal.name &&
           <p>
             Name: {animal.name} 
           </p>
+          }
           <p>
             Description: {animal.description} 
           </p>
