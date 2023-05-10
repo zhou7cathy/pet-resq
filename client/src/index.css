@@ -22,6 +22,16 @@ h5 {
   text-align: center;
 }
 
+.ant-carousel {
+  height: 300px;
+  width: 300px;
+}
+
+.ant-form-item-row {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -43,12 +53,11 @@ h5 {
   flex-wrap: wrap;
 }
 
-.report-pet-form {
-  display: flex;
-  justify-content: center;
+.post-btn {
+  margin: 0 5px;
 }
 
-.ant-form-item-row {
+.post-btns {
   display: flex;
   justify-content: center;
 }
@@ -60,27 +69,33 @@ h5 {
   border-radius: 20px;
 }
 
+.post-detail {
+  height:auto;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 .post-img {
   object-fit: cover;
   margin: 10px;
 }
 
-.post-detail {
-  height:250px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+.report-pet-form {
+  display: flex;
+  justify-content: center;
 }
 
-.post-btns {
-display: flex;
-justify-content: center;
-}
 
-.post-btn {
-  margin: 0 5px;
+@media screen and (max-width:920px) {
+  .post-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px 30px 50px;
+    border-style: solid;
+    border-radius: 20px;
   }
-
   .ant-carousel {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 400px;
   }
+}

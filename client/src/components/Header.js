@@ -14,11 +14,13 @@ export default function Header() {
 
   return (
     <div className='header'>
-      <img src={PetResQ} alt='pet resQ logo' />
-      <img src={Slogan} alt='pet resQ slogan' />
+      <div className='header-imgs'>
+        <img className='pet-resq-logo'src={PetResQ} alt='pet resQ logo' />
+        <img className='slogan' src={Slogan} alt='pet resQ slogan' />
+      </div>
         <Space wrap>
           {Auth.loggedIn() ? (
-            <>
+            <div className='main-buttons'>
               <Button className="logout-btn" onClick={logout}>
                 Logout
               </Button>
@@ -27,7 +29,7 @@ export default function Header() {
                   View My Profile
                 </Button>
               </Link>
-            </>
+            </div>
           ) : (
             <>
               <Link className="login-btn" to="/Login">

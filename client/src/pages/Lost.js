@@ -25,7 +25,7 @@ export default function Lost() {
                         className='post-img'
                         key={image}
                         width={300}
-                        height={200}
+                        height={230}
                         src={image}
                       />
                       ))}
