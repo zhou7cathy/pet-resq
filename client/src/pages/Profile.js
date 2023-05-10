@@ -116,7 +116,7 @@ const Profile = () => {
         </div>
       ))}
       </div>
-      <Link to="/pet-resq">
+      <Link to="/">
         <Button>
           &larr; Go Back
         </Button>
