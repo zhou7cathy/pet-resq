@@ -5,7 +5,7 @@ import { REMOVE_ANIMAL } from '../utils/mutations';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
-import { Button, Image} from 'antd';
+import { Carousel, Button, Image} from 'antd';
 
 const Profile = () => {
     // Remove animal post
@@ -73,15 +73,19 @@ const Profile = () => {
         {user.animals && user.animals.map((animal) => (
         <div key={animal._id} className='post-container'>
           <div>
-          {animal.image.map((image) => (
-            <Image
-              className='post-img'
-              key={image}
-              width={300}
-              height={200}
-              src={image}
-            />
-            ))}
+            <Image.PreviewGroup>
+              <Carousel  dotPosition= 'left'>
+                {animal.image.map((image) => (
+                <Image
+                  className='post-img'
+                  key={image}
+                  width={300}
+                  height={200}
+                  src={image}
+                />
+                ))}
+              </Carousel>
+            </Image.PreviewGroup>
           </div>
           <div className='post-detail'>
           <p>

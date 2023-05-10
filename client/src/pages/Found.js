@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_FOUND_ANIMALS } from '../utils/queries';
-import { Image } from 'antd';
+import { Carousel, Image } from 'antd';
 
 export default function Found() {
   const { loading, data } = useQuery(QUERY_FOUND_ANIMALS);
@@ -18,15 +18,19 @@ export default function Found() {
               {foundAnimals && foundAnimals.map((animal) => (
               <div key={animal._id} className='post-container'>
                 <div>
-                  {animal.image.map((image) => (
-                  <Image
-                    className='post-img'
-                    key={image}
-                    width={300}
-                    height={200}
-                    src={image}
-                  />
-                  ))}
+                  <Image.PreviewGroup>
+                    <Carousel  dotPosition= 'left'>
+                      {animal.image.map((image) => (
+                      <Image
+                        className='post-img'
+                        key={image}
+                        width={300}
+                        height={200}
+                        src={image}
+                      />
+                      ))}
+                    </Carousel>
+                  </Image.PreviewGroup>
                 </div>
                 <div className='post-detail'>
                   <p>
