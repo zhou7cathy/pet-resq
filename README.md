@@ -35,19 +35,19 @@ When you view the footer, you will presented with links to facebook, Instagram, 
 The following images show the web application's appearance and functionality:
 
 About Us page:
-![alt text](./client/src/assets/about-us.png)
+![alt text](/client/src/assets/about-us.png)
 
 Lost Pet page:
-![alt text](./client/src/assets/lost-pet.png)
+![alt text](/client/src/assets/lost-pet.png)
 
 Found Pet page:
-![alt text](./client/src/assets/found-pet.png)
+![alt text](/client/src/assets/found-pet.png)
 
 Report Pet Form:
-![alt text](./client/src/assets/report-pet-form.png)
+![alt text](/client/src/assets/report-pet-form.png)
 
 Profile Page:
-![alt text](./client/src/assets/profile-page.png)
+![alt text](/client/src/assets/profile-page.png)
 ## License
 Application is covered under MIT https://opensource.org/licenses/MIT
 
