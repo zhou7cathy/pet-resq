@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# pet-resq
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Description](#Description)
+- [Technologies](#Technologies)
+- [Usage](#Usage)
+- [License](#License)
+- [Deployment](##Deployment)
+- [Contact](#Contact)
+## Description
+The pet resq are created for user who wants to be able to quickly report a lost or found pet.​ In order to increase the chances for users to reunited with their pet or helping someone else find their lost pet.​
 
-## Available Scripts
+## Technologies
+HTML <br />
+CSS <br />
+Ant Design for UI component​ <br />
+Apollo GraphQL with a Node.js and Express.js server <br />
+MangoDB and Mongoose ODM for database​ <br />
+MongoDB Compass <br />
+Use queries and mutations for retrieving, adding, updating, and deleting data <br />
+Heroku  <br />
+Visual Studio Code <br />
+## Usage
+When you load the app, you will presented a page with a header, a section for content, and a footer. In the navigation, you will presented with the titles About Us, Lost Pet, Found Pet, and FAQs, and the title corresponding to the current section is highlighted. When you load the app the first time, the About Us title and section are selected by default.
 
-In the project directory, you can run:
+When you presented with the about us section, you will see a title of About us, and information about the app.
+When you presented with the lost pet section, you will see information about the pet, including name, animal type, location, description and uploaded photos.​
+When you presented with the found pet section, you will see information about the pet, including name, animal type, location, description and uploaded photos.​
+When you presented with the FAQs section, you will see the fraqently asked questions and answers, including how to report a pet and hoe to remove post.​
+When you signed in, you will be presented with a view my profile button on the top right conner. Once, you click the view my profile button you will be able to see a button to report pet. Also,you will be presented with the detail of your reported pet.
+When press the report pet button, you will be presented with a report pet form for you to enter information about the pet, including name, animal type, location, description and upload photos.​
+When you view the footer, you will presented with links to facebook, Instagram, and email.
 
-### `npm start`
+The following images show the web application's appearance and functionality:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+About Us page:
+![alt text](./client/src/assets/about-us.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Lost Pet page:
+![alt text](./client/src/assets/lost-pet.png)
 
-### `npm test`
+Found Pet page:
+![alt text](./client/src/assets/found-pet.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Report Pet Form:
+![alt text](./client/src/assets/report-pet-form.png)
 
-### `npm run build`
+Profile Page:
+![alt text](./client/src/assets/profile-page.png)
+## License
+Application is covered under MIT https://opensource.org/licenses/MIT
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
+Link to deployed application: https://shrouded-atoll-82624.herokuapp.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Link to my GitHub profile: https://github.com/zhou7cathy <br />
+Email me with any questions: zhou7cathy@gmail.com
