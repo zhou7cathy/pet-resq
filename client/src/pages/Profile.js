@@ -68,8 +68,8 @@ const Profile = () => {
           Your Profile
         </h2>
         <h3>
-          Hello {user.name}. You haven't report any lost or found pet yet. <br></br>
-          Press report button to report pet.
+          Hello {user.name}. You haven't reported any lost or found pets yet. <br></br>
+          Press the report button to report the pet.
         </h3>
         <Link  to="/report-pet">
             <Space wrap>
@@ -88,13 +88,18 @@ const Profile = () => {
 
   return (
     <div>
+      <Link to="/">
+        <Button className='home-btn'>
+          &larr; Home
+        </Button>
+      </Link>
       <div className='profile'>
         <h2>
           Your Profile
         </h2>
         <h3>
           Hello {user.name}. Your report has been posted to lost and found page. <br></br>
-          Press report button to report another pet.
+          Press the report button to report another pet.
         </h3>
         <Link  to="/report-pet">
           <Space wrap>
@@ -148,18 +153,15 @@ const Profile = () => {
                 Delete
               </Button>
             </div>
-            {error && (
-              <div>{error.message}</div>
-            )}
           </div>
         </div>
       ))}
       </div>
-      <Link to="/">
+      {/* <Link to="/">
         <Button>
           &larr; Home
         </Button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

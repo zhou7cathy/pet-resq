@@ -45,6 +45,10 @@ h3 {
   min-height: 70vh;
 }
 
+.faqs {
+  margin: 5%;
+}
+
 .footer {
   text-align: center;
 }
@@ -53,6 +57,12 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.home-btn{
+  display: block;
+  margin: top 20px;
+  margin-left: 40px;
 }
 
 .icon {

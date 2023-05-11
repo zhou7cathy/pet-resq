@@ -165,9 +165,13 @@ const faqs= [
 		"question": "I have found or seen someone's lost pet, what do I do?",
 		"answer": "Report your found pet or your sighting with us by clicking here. The sooner you do that, the sooner your found pet details become available for hundreds of lost pet owners to review on the website.",
 	},
+  {
+		"question": "How do I report a pet?",
+		"answer": "Simply sign up or login in, and you will be directed to your profile page after you logged in. Then, you will see a report button on the page for you to click. Once you filled up the report pet form and press submit, your reported pet will be posted on the lost and found page.",
+	},
 	{
 		"question": "How do I remove my post?",
-		"answer": "Login in first, and go to your profile then you will see all of your posts with delete buttons for each of the post.",
+		"answer": "Log in first, and you will be directed to your profile page after you logged in. Then you will see all of your reported pet with a delete button next to it.",
 	},
 ]
 

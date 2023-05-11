@@ -9,7 +9,7 @@ export default function FAQs() {
   return (
     <div>
       <h2>FAQs</h2>
-      <div>
+      <div className='faqs'>
       {loading ? (
             <div>Loading...</div>
           ) : (
