@@ -167,11 +167,11 @@ const faqs= [
 	},
   {
 		"question": "How do I report a pet?",
-		"answer": "Simply sign up or login in, and you will be directed to your profile page after you logged in. Then, you will see a report button on the page for you to click. Once you filled up the report pet form and press submit, your reported pet will be posted on the lost and found page.",
+		"answer": "Simply sign up or login in, and then click the view my profile button on the top right of the page. Then, you will see a report button on the page for you to click. Once you filled up the report pet form and press submit, your reported pet will be posted on the lost and found page.",
 	},
 	{
 		"question": "How do I remove my post?",
-		"answer": "Log in first, and you will be directed to your profile page after you logged in. Then you will see all of your reported pet with a delete button next to it.",
+		"answer": "Simply sign up or login in, and then click the view my profile button on the top right of the page. Then you will see all of your reported pet with a delete button next to it. Press the delete button to remove your post.",
 	},
 ]
 
