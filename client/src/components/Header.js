@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 import { Button, Space } from 'antd';
 import PetResQ from '../assets/pet-resq.png'
-import Slogan from '../assets/slogan.png'
-
 
 export default function Header() {
   const logout = (event) => {
@@ -14,10 +12,10 @@ export default function Header() {
 
   return (
     <div className='header'>
-      <div className='header-imgs'>
+
         <img className='pet-resq-logo'src={PetResQ} alt='pet resQ logo' />
-        <img className='slogan' src={Slogan} alt='pet resQ slogan' />
-      </div>
+        <h1 className='slogan'>Helping lost pets find their way back home</h1>
+
         <Space wrap className='main-buttons'>
           {Auth.loggedIn() ? (
             <div>

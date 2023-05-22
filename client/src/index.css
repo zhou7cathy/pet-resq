@@ -5,8 +5,10 @@ a {
 }
 
 h1 {
+  display: flex;
+  font-family: 'Montez', cursive;
   padding:0px 20px;
-  color: black;
+  color: rgb(135, 77, 110);
 }
 
 h2 {
@@ -18,6 +20,10 @@ h2 {
 h3 {
   font-family: 'Montez', cursive;
   text-align: center;
+}
+
+p{
+  font-family: 'Montez', cursive;
 }
 
 .about-us {
@@ -32,6 +38,10 @@ h3 {
 .ant-form-item-row {
   display: flex;
   justify-content: center;
+}
+
+.ant-tabs-tab-btn {
+  font-family: 'Montez', cursive;
 }
 
 .card {
@@ -50,11 +60,13 @@ h3 {
 }
 
 .footer {
+  font-family: 'Montez', cursive;
   text-align: center;
 }
 
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -119,7 +131,7 @@ h3 {
   margin-bottom: 3%;
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:1120px) {
   .slogan {
     display: none;
   }
