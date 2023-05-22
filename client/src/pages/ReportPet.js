@@ -89,7 +89,7 @@ const ReportPet = (props) => {
         variables: { ...formState },
       });
 
-      window.location.assign('/');
+      window.location.assign('/me');
       
     } catch (e) {
       console.error(e);
