@@ -4,8 +4,11 @@ import { QUERY_FOUND_ANIMALS } from '../utils/queries';
 import { Carousel, Image } from 'antd';
 
 export default function Found() {
-  const { loading, data } = useQuery(QUERY_FOUND_ANIMALS);
+  const { loading, data, client } = useQuery(QUERY_FOUND_ANIMALS);
   const foundAnimals = data?.foundAnimals || [];
+  if (foundAnimals.length!=0) {
+    client.resetStore();
+  }
 
   return (
     <div>

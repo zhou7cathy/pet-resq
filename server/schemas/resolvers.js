@@ -39,7 +39,7 @@ const resolvers = {
           path: 'animals',
           populate: { path: 'animalType' },
           options: {sort: {'postDate': -1}}
-      });
+        });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -101,15 +101,20 @@ const resolvers = {
           _id: animalId,
         });
 
-        await User.findOneAndUpdate(
+        var user = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $pull: { animals: animal._id } },
           { new: true},
         );
 
-        return animal;
+        return User.findOne({ _id: context.user._id }).populate({
+          path: 'animals',
+          populate: { path: 'animalType' },
+          options: {sort: {'postDate': -1}}
+        });
+      } else {
+        throw new AuthenticationError('You need to be logged in!');
       }
-      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };

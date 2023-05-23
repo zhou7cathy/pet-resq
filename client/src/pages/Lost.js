@@ -4,8 +4,11 @@ import { QUERY_LOST_ANIMALS } from '../utils/queries';
 import { Carousel, Image } from 'antd';
 
 export default function Lost() {
-  const { loading, data } = useQuery(QUERY_LOST_ANIMALS);
+  const { loading, data, client } = useQuery(QUERY_LOST_ANIMALS);
   const lostAnimals = data?.lostAnimals || [];
+  if (lostAnimals.length!=0) {
+    client.resetStore();
+  }
 
   return (
      <div>

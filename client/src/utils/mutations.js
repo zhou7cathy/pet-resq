@@ -45,6 +45,20 @@ export const REMOVE_ANIMAL = gql`
   mutation removeAnimal($animalId: ID!) {
     removeAnimal(animalId: $animalId) {
       _id
+      name
+      animals {
+        _id
+        name
+        location
+        status
+        image
+        description
+        postDate
+        animalType{
+          _id
+          name
+        }
+      }
     }
   }
 `;
