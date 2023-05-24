@@ -30,6 +30,11 @@ p{
   text-align: center;
 }
 
+.ant-alert {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .ant-carousel {
   height: 100px;
   width: 300px;

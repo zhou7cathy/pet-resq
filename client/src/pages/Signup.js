@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, Input,Card } from 'antd';
+import { Button, Form, Input, Card, Alert } from 'antd';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -49,6 +49,13 @@ const Signup = () => {
           }}
         >
           <h2>Sign Up</h2>
+          {error && (
+            <Alert 
+              message= "You password needs to be at least 8 characters long."
+              closable 
+              type="error" 
+            />
+          )}
           <div>
               <Form 
                 onFinish={handleFormSubmit}
@@ -99,7 +106,6 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 </Form.Item>
-                
                 <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
                   <Button type="primary" htmlType='submit'>
                     Submit
@@ -107,16 +113,10 @@ const Signup = () => {
                 </Form.Item>
               </Form>
               <Link to="/Login">
-                <p className='link'>
+                <p className=''>
                   Already registered? Sign in!
                 </p>
               </Link>
-
-            {error && (
-              <div>
-                {error.message}
-              </div>
-            )}
           </div>
         </Card>
       </div>
