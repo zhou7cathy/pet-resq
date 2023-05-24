@@ -12,8 +12,9 @@ export default function Header() {
 
   return (
     <div className='header'>
-
-        <img className='pet-resq-logo'src={PetResQ} alt='pet resQ logo' />
+        <Link to="/">
+          <img className='pet-resq-logo'src={PetResQ} alt='pet resQ logo' />
+        </Link>
         <h1 className='slogan'>Helping lost pets find their way back home</h1>
 
         <Space wrap className='main-buttons'>
