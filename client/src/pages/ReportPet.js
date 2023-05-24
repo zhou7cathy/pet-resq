@@ -1,6 +1,7 @@
 import { PlusOutlined } from '@ant-design/icons';
 
 import {
+  Alert,
   Button,
   Form,
   Input,
@@ -16,13 +17,6 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ANIMAL_TYPES } from '../utils/queries';
 
 const { TextArea } = Input;
-
-const normFile = (e: any) => {
-  if (Array.isArray(e)) {
-    return e;
-  }
-  return e?.fileList;
-};
 
 const ReportPet = (props) => {
   const { Option } = Select;
@@ -112,7 +106,11 @@ const ReportPet = (props) => {
           layout="horizontal"
           style={{ Width: 600, }}
         >
-          <Form.Item label="Pet Status">
+          <Form.Item 
+            label="Pet Status"
+            name="Pet Status"                   
+            rules={[{ required: true, message: 'Please select a status' }]}
+          >
             <Radio.Group
                 name="status"
                 value={formState.status}
@@ -130,7 +128,11 @@ const ReportPet = (props) => {
             />
           </Form.Item>
 
-          <Form.Item label="Location">
+          <Form.Item 
+            label="Location"
+            name="Location"
+            rules={[{ required: true, message: 'Please enter the location' }]}
+          >
             <Input 
               name="location"
               value={formState.location}
@@ -138,7 +140,11 @@ const ReportPet = (props) => {
             />
           </Form.Item>
 
-          <Form.Item label="Animal Type">
+          <Form.Item 
+            label="Animal Type"
+            name="Animal Type"
+            rules={[{ required: true, message: 'Please select an animal type' }]}
+          >
             <Select
               placeholder="Select animal type"
               onChange={animalTypeHandler}
@@ -154,7 +160,11 @@ const ReportPet = (props) => {
             </Select>
           </Form.Item>
 
-          <Form.Item label="Upload Photo" valuePropName="fileList">
+          <Form.Item 
+            label="Upload Photo"
+            name="Upload Photo"
+            rules={[{ required: true, message: 'Please upload at least one photo' }]}
+          >
             <Upload onChange={imageHandler} customRequest={dummyRequest} listType="picture-card">
               <div>
                 <PlusOutlined />
@@ -163,7 +173,11 @@ const ReportPet = (props) => {
             </Upload>
           </Form.Item>
 
-          <Form.Item label="Description">
+          <Form.Item 
+            label="Description"
+            name="Description"
+            rules={[{ required: true, message: 'Please enter the description' }]}
+          >
             <TextArea 
               rows={4} 
               name="description"
@@ -172,20 +186,20 @@ const ReportPet = (props) => {
               onChange={handleChange}
             />
           </Form.Item>
-          
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
             <Button type="primary" htmlType='submit'>
               Submit
             </Button>
           </Form.Item>
         </Form>
-
-        {error && (
-          <div>
-            {error.message}
-          </div>
-        )}
       </div>
+      {error && (
+        <Alert 
+          message="Your description need to be at least 20 characters and maximum 500 characters long."
+          closable 
+          type="error" 
+        />
+      )}
 
       <div>
         {location.pathname !== '/' && (
