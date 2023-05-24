@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, Card } from 'antd';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
@@ -38,51 +38,63 @@ const Login = (props) => {
   return (
     <main>
       <div className="card">
-        <h3>Log In</h3>
-        <div>
-          <Form 
-            onFinish={handleFormSubmit}
-            name="basic"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 16 }}
-            style={{ maxWidth: 600 }}
-            autoComplete="off"
-          >
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[{ required: true, message: 'Please input your email!' }]}
+        <Card
+          className="card"
+          style={{
+            width: 400,
+          }}
+        >
+          <h2>Log In</h2>
+          <div>
+            <Form 
+              onFinish={handleFormSubmit}
+              name="basic"
+              labelCol={{ span: 8 }}
+              wrapperCol={{ span: 16 }}
+              style={{ maxWidth: 600 }}
+              autoComplete="off"
             >
-              <Input
-                placeholder="Your email"
+              <Form.Item
+                label="Email"
                 name="email"
-                type="email"
-                value={formState.email}
-                onChange={handleChange}
-              />
-            </Form.Item>
-            
-            <Form.Item
-              label="Password"
-              name="password"
-              rules={[{ required: true, message: 'Please input your password!' }]}
-            >
-              <Input
-                placeholder="Your password"
+                rules={[{ required: true, message: 'Please input your email!' }]}
+              >
+                <Input
+                  placeholder="Your email"
+                  name="email"
+                  type="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+              </Form.Item>
+              
+              <Form.Item
+                label="Password"
                 name="password"
-                type="password"
-                value={formState.password}
-                onChange={handleChange}
-              />
-            </Form.Item>
+                rules={[{ required: true, message: 'Please input your password!' }]}
+              >
+                <Input
+                  placeholder="Your password"
+                  name="password"
+                  type="password"
+                  value={formState.password}
+                  onChange={handleChange}
+                />
+              </Form.Item>
 
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-              <Button type="primary" htmlType='submit'>
-                Submit
-              </Button>
-            </Form.Item>
-          </Form>
-        </div>
+              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                <Button type="primary" htmlType='submit'>
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+            <Link to="/signup">
+              <p className='link'>
+                Don't have an account? Sign Up!
+              </p>
+            </Link>
+          </div>
+        </Card>
       </div>
 
       <div>

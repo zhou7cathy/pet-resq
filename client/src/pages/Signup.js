@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input,Card } from 'antd';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -42,71 +42,83 @@ const Signup = () => {
   return (
     <main>
       <div className="card">
-        <h2>Sign Up</h2>
-        <div>
-            <Form 
-              onFinish={handleFormSubmit}
-              name="basic"
-              labelCol={{ span: 8 }}
-              wrapperCol={{ span: 16 }}
-              style={{ maxWidth: 600 }}
-              autoComplete="off"
-            >
-              <Form.Item
-                label="Name"
-                name="name"
-                rules={[{ required: true, message: 'Please input your name!' }]}
+        <Card
+          className="card"
+          style={{
+            width: 400,
+          }}
+        >
+          <h2>Sign Up</h2>
+          <div>
+              <Form 
+                onFinish={handleFormSubmit}
+                name="basic"
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+                style={{ maxWidth: 600 }}
+                autoComplete="off"
               >
-                <Input
-                  placeholder="Your name"
+                <Form.Item
+                  label="Name"
                   name="name"
-                  type="text"
-                  value={formState.name}
-                  onChange={handleChange}
-                />
-              </Form.Item>
+                  rules={[{ required: true, message: 'Please input your name!' }]}
+                >
+                  <Input
+                    placeholder="Your name"
+                    name="name"
+                    type="text"
+                    value={formState.name}
+                    onChange={handleChange}
+                  />
+                </Form.Item>
 
-              <Form.Item
-                label="Email"
-                name="email"
-                rules={[{ required: true, message: 'Please input your email!' }]}
-              >
-                <Input
-                  placeholder="Your email"
+                <Form.Item
+                  label="Email"
                   name="email"
-                  type="email"
-                  value={formState.email}
+                  rules={[{ required: true, message: 'Please input your email!' }]}
+                >
+                  <Input
+                    placeholder="Your email"
+                    name="email"
+                    type="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                  />
+                </Form.Item>
+
+                <Form.Item
+                  label="Password"
+                  name="password"
+                  rules={[{ required: true, message: 'Please input your password!' }]}
+                >
+                <Input
+                  placeholder="Your password"
+                  name="password"
+                  type="password"
+                  value={formState.password}
                   onChange={handleChange}
                 />
-              </Form.Item>
+                </Form.Item>
+                
+                <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                  <Button type="primary" htmlType='submit'>
+                    Submit
+                  </Button>
+                </Form.Item>
+              </Form>
+              <Link to="/Login">
+                <p className='link'>
+                  Already registered? Sign in!
+                </p>
+              </Link>
 
-              <Form.Item
-                label="Password"
-                name="password"
-                rules={[{ required: true, message: 'Please input your password!' }]}
-              >
-              <Input
-                placeholder="Your password"
-                name="password"
-                type="password"
-                value={formState.password}
-                onChange={handleChange}
-              />
-              </Form.Item>
-              
-              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button type="primary" htmlType='submit'>
-                  Submit
-                </Button>
-              </Form.Item>
-            </Form>
-
-          {error && (
-            <div>
-              {error.message}
-            </div>
-          )}
-        </div>
+            {error && (
+              <div>
+                {error.message}
+              </div>
+            )}
+          </div>
+        </Card>
       </div>
 
       <div>
