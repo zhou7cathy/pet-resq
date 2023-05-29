@@ -105,7 +105,7 @@ p{
 
 .post-btns {
   display: block;
-  margin-left: 80%;
+  margin-left: 75%;
 }
 
 .post-container {
@@ -118,7 +118,7 @@ p{
 
 .post-detail {
   height:auto;
-  width: 100%;
+  width: 90%;
   margin-left: 20px;
   margin-bottom: 20px;
 }
