@@ -12,7 +12,7 @@ export default function Lost() {
 
   return (
      <div>
-      <h2>Lost</h2>
+      <h2>Lost Pet</h2>
       <div>
       {loading ? (
             <div>Loading...</div>
@@ -49,9 +49,11 @@ export default function Lost() {
                   <p>
                     Aniaml Type: {animal.animalType.name} 
                   </p>
+                  {animal.name &&
                   <p>
                     Name: {animal.name} 
                   </p>
+                  }
                   <p>
                     Description: {animal.description} 
                   </p>

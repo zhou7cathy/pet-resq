@@ -68,7 +68,7 @@ const Profile = () => {
           Your Profile
         </h2>
         <h3>
-          Hello {user.name}. You haven't reported any lost or found pets yet. <br></br>
+          Hello, {user.name}. You haven't reported any lost or found pets yet. <br></br>
           Press the report button to report the pet.
         </h3>
         <Link  to="/report-pet">
@@ -98,8 +98,8 @@ const Profile = () => {
           Your Profile
         </h2>
         <h3>
-          Hello {user.name}. Your report has been posted to lost and found page. <br></br>
-          Press the report button to report another pet.
+          Hello, {user.name}. You have successfully published your reported pet(s) on the dedicated lost/found page. <br></br>
+          Press the report pet button to report another pet.
         </h3>
         <Link  to="/report-pet">
           <Space wrap>

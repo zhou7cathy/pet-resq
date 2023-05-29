@@ -12,7 +12,7 @@ export default function Found() {
 
   return (
     <div>
-      <h2>Found</h2>
+      <h2>Found Pet</h2>
       <div>
       {loading ? (
             <div>Loading...</div>
