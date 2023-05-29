@@ -113,7 +113,7 @@ const Signup = () => {
                 </Form.Item>
               </Form>
               <Link to="/Login">
-                <p className=''>
+                <p>
                   Already registered? Sign in!
                 </p>
               </Link>

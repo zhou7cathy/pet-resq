@@ -95,7 +95,7 @@ const Login = (props) => {
               </Form.Item>
             </Form>
             <Link to="/signup">
-              <p className='link'>
+              <p>
                 Don't have an account? Sign Up!
               </p>
             </Link>
