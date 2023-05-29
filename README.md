@@ -55,7 +55,7 @@ Profile Page:
 Application is covered under MIT https://opensource.org/licenses/MIT
 
 ## Deployment
-Link to deployed application: https://shrouded-atoll-82624.herokuapp.com/
+Link to deployed application: https://rocky-wildwood-75738.herokuapp.com/
 
 ## Contact
 Link to my GitHub profile: https://github.com/zhou7cathy <br />
