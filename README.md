@@ -43,6 +43,9 @@ Lost Pet page:
 Found Pet page:
 ![alt text](/client/src/assets/found-pet.png)
 
+FAQs page:
+![alt text](/client/src/assets/faqs.png)
+
 Report Pet Form:
 ![alt text](/client/src/assets/report-pet-form.png)
 
