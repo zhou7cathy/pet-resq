@@ -6,7 +6,7 @@
 - [Technologies](#Technologies)
 - [Usage](#Usage)
 - [License](#License)
-- [Deployment](##Deployment)
+- [Deployment](#Deployment)
 - [Contact](#Contact)
 ## Description
 The pet resq are created for user who wants to be able to quickly report a lost or found pet.​ In order to increase the chances for users to reunited with their pet or helping someone else find their lost pet.​
